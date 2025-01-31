@@ -14,7 +14,8 @@ The landing page is structured with the following sections:
 
 ## Fonts Used
 
-- Roboto from Google Fonts.
+- 'Roboto' from Google Fonts.
+- 'Noto Serif' from Google Fonts.
 
 ## Images
 
