@@ -1,18 +1,6 @@
-/*
-  Colors and font styles
-
-  - font used: Roboto
-  - dark background color (hero and footer): #1F2937
-  - Hero main text: 48px, #F9FAF8, weight: 900
-  - Hero secondary text, Header link text: 18px, #E5E7EB
-  - Header logo text: 24px #F9FAF8
-
-  - Button color, call to action background color: #3882F6
-  - Information header text: 36px, #1F2937, weight: 900
-
-  - Quote section background color: #E5E7EB
-  - Quote text: 36px light italic #1F2937
-*/
+:root {
+	--header-height: 64px;
+}
 
 * {
 	box-sizing: border-box;
@@ -22,6 +10,7 @@
 
 html {
 	font-size: 16px;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -36,11 +25,200 @@ a {
 	text-decoration: none;
 }
 
+p {
+	line-height: 1.4;
+}
+
 button {
 	outline: none;
 	border: none;
-	padding: 6px 16px;
+	padding: 8px 24px;
 	border-radius: 8px;
 	font-size: inherit;
+	cursor: pointer;
 }
 
+.container {
+	max-width: 1000px;
+	margin-inline: auto;
+}
+
+.section {
+	padding: 48px 24px;
+}
+
+/* ---- Header ---- */
+
+.header {
+	background-color: #1f2937;
+	padding: 0 24px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+	height: var(--header-height);
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	font-size: 24px;
+	color: #f9faf8;
+}
+
+.links {
+	margin-left: auto;
+	display: flex;
+	gap: 24px;
+}
+
+.links a {
+	font-size: 18px;
+	color: #e5e7eb;
+}
+
+/* ---- Hero ---- */
+
+.hero {
+	background-color: #1f2937;
+}
+
+.hero .container {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	gap: 24px;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero h1 {
+	font-size: 48px;
+	font-weight: 900;
+	color: #f9faf8;
+}
+
+.hero p {
+	font-size: 18px;
+	color: #e5e7eb;
+	margin-top: 8px;
+	margin-bottom: 16px;
+}
+
+.hero-info {
+	flex-grow: 1;
+	flex-basis: 400px;
+}
+
+.hero button {
+	background-color: #3882f6;
+	color: #fff;
+}
+
+.hero img {
+	max-width: 100%;
+	width: 360px;
+}
+
+/* ---- Features ---- */
+
+.features h2 {
+	text-align: center;
+	font-size: 36px;
+	font-weight: 900;
+	color: #1f2937;
+}
+
+.features .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 48px;
+	gap: 48px;
+}
+
+.features .card {
+	flex-basis: 152px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 16px;
+	color: #1f2937;
+}
+
+.features .card .image {
+	width: 152px;
+	height: 152px;
+	border: 2px solid #3882f6;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.features img {
+	width: 64px;
+	height: 64px;
+}
+
+/* ---- Quote ---- */
+
+.quote {
+	background-color: #e5e7eb;
+}
+
+.quote-text {
+	font-size: 36px;
+	font-weight: 300;
+	font-style: italic;
+	color: #1f2937;
+}
+
+.quote-author {
+	margin-top: 24px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: right;
+}
+
+/* ---- Call to action ---- */
+
+.call-to-action .container {
+	background-color: #3882f6;
+	color: #fff;
+	border-radius: 8px;
+	padding: 36px 24px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 24px;
+}
+
+.call-to-action p {
+	margin-top: 8px;
+}
+
+.call-to-action button {
+	background-color: transparent;
+	color: #fff;
+	border: 2px solid #fff;
+	flex-shrink: 0;
+}
+
+/* ---- Footer ---- */
+
+.footer {
+	background-color: #1f2937;
+	color: #fff;
+	padding: 24px;
+	text-align: center;
+}
+
+.footer a {
+	color: #fff;
+	text-decoration: underline;
+}
