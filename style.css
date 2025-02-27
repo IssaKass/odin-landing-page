@@ -192,6 +192,10 @@ button {
 
 /* ---- Call to action ---- */
 
+.call-to-action {
+	padding-inline: 1rem;
+}
+
 .call-to-action .container {
 	background-color: #3882f6;
 	color: #fff;
