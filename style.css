@@ -77,12 +77,20 @@ button {
 
 .links {
 	display: flex;
-	gap: 24px;
+	gap: 12px;
 }
 
 .links a {
 	font-size: 18px;
 	color: #e5e7eb;
+	padding: 0.6rem 1rem;
+	border-radius: 0.4rem;
+	transition: all 250ms ease;
+}
+
+.links a:hover {
+	background-color: #3882f6;
+	color: #fff;
 }
 
 /* ---- Hero ---- */
